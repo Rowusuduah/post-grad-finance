@@ -1,5 +1,10 @@
 # post-grad-finance
 
+> **Archived (2026-05-16).** This project is no longer developed. Its 14-step
+> guided action plan now lives in **Richmond Financial OS** (private repo
+> `Rowusuduah/richmond-financial-os`) as the "Action Plan" tab. This repo is kept
+> for history; the live demo site can stay up.
+
 A guided **Financial Reset** for life after school — and a private little tracker
 to keep your accounts in check.
 
