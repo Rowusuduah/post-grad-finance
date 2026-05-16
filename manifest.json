@@ -1,0 +1,20 @@
+{
+  "name": "post-grad-finance — your financial reset",
+  "short_name": "post-grad",
+  "description": "A guided financial reset for life after school, plus a private tracker for accounts, goals, and bills.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FBF7F0",
+  "theme_color": "#FBF7F0",
+  "categories": ["finance", "productivity", "lifestyle"],
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

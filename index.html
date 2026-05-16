@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';" />
+  <meta name="theme-color" content="#FBF7F0" />
+  <meta name="description" content="A guided financial reset for life after school — plus a private tracker for your accounts, goals, and bills." />
+  <title>post-grad-finance · your financial reset</title>
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./icons/icon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Masthead ============ -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand">
+        <span>post-grad<span class="dot">.</span>finance</span>
+      </div>
+      <nav class="nav-tabs" role="tablist" aria-label="Sections">
+        <button class="tab-btn" id="tab-plan" role="tab"
+                aria-selected="true" aria-controls="panel-plan" tabindex="0">Plan</button>
+        <button class="tab-btn" id="tab-tracker" role="tab"
+                aria-selected="false" aria-controls="panel-tracker" tabindex="-1">Tracker</button>
+        <button class="tab-btn" id="tab-overview" role="tab"
+                aria-selected="false" aria-controls="panel-overview" tabindex="-1">Overview</button>
+      </nav>
+      <button class="icon-btn" id="theme-toggle" type="button"
+              aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <!-- ============ Main ============ -->
+  <main id="main">
+    <section class="tabpanel" id="panel-plan" role="tabpanel"
+             aria-labelledby="tab-plan" tabindex="0"></section>
+
+    <section class="tabpanel" id="panel-tracker" role="tabpanel"
+             aria-labelledby="tab-tracker" tabindex="0" hidden></section>
+
+    <section class="tabpanel" id="panel-overview" role="tabpanel"
+             aria-labelledby="tab-overview" tabindex="0" hidden></section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ Scripts (dependency order) ============ -->
+  <script src="./js/utils.js"></script>
+  <script src="./js/storage.js"></script>
+  <script src="./js/plan-data.js"></script>
+  <script src="./js/sample.js"></script>
+  <script src="./js/ui-plan.js"></script>
+  <script src="./js/ui-tracker.js"></script>
+  <script src="./js/ui-overview.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
