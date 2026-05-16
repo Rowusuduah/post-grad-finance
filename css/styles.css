@@ -314,11 +314,6 @@ textarea { resize: vertical; min-height: 64px; font-family: var(--f-body); }
 .phase-meter { font-size: 13px; color: var(--ink-faint); margin-top: 6px; font-weight: 600; }
 
 .journey { position: relative; padding-left: 40px; }
-.journey::before {
-  content: ""; position: absolute; left: 13px; top: 8px; bottom: 8px;
-  width: 2px; background: repeating-linear-gradient(
-    var(--line) 0 6px, transparent 6px 12px);
-}
 
 /* ---------- Step card ---------- */
 .step {
@@ -329,6 +324,17 @@ textarea { resize: vertical; min-height: 64px; font-family: var(--f-body); }
               background 200ms var(--ease);
 }
 .step:hover { box-shadow: var(--e-2); transform: translateY(-2px); }
+
+/* journey line — one segment per step; solid sage once the step is done */
+.step::before {
+  content: ""; position: absolute; left: -27px; top: 0; bottom: -14px;
+  width: 2px; z-index: 0;
+  background: repeating-linear-gradient(
+    var(--line) 0 6px, transparent 6px 12px);
+}
+.step:last-child::before { bottom: 50%; }
+.step.is-done::before { background: var(--grow); }
+.step .medallion { z-index: 1; }
 
 /* medallion sitting on the journey line */
 .medallion {
@@ -549,7 +555,7 @@ textarea { resize: vertical; min-height: 64px; font-family: var(--f-body); }
   .nav-tabs { margin-left: auto; }
   .tab-btn { padding: 8px 13px; }
   .journey { padding-left: 34px; }
-  .journey::before { left: 10px; }
+  .step::before { left: -21px; }
   .medallion { left: -34px; }
 }
 

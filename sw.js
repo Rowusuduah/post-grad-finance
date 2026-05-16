@@ -2,7 +2,7 @@
    Bump CACHE_NAME on every release so clients get the new files. */
 "use strict";
 
-var CACHE_NAME = "pgf-v1";
+var CACHE_NAME = "pgf-v2";
 
 /* relative paths so this works under the /post-grad-finance/ Pages subpath */
 var APP_SHELL = [
