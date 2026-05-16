@@ -45,7 +45,18 @@ Hosted on GitHub Pages from the `main` branch (root). Push to `main` and the liv
 site updates. After changing any app file, bump `CACHE_NAME` in `sw.js` so visitors
 get the new version.
 
+## Tests
+
+The app ships with a jsdom smoke test. It is dev-only — the app itself has no
+dependencies:
+
+```sh
+npm install      # installs jsdom (dev only)
+npm test         # runs the local smoke test
+npm run test:live   # runs the same checks against the deployed site
+```
+
 ## Tech
 
-Vanilla HTML / CSS / JavaScript. No build step, no dependencies, no tracking.
-Installable as a PWA and works offline.
+Vanilla HTML / CSS / JavaScript. The app has no build step, no runtime
+dependencies, and no tracking. Installable as a PWA and works offline.
